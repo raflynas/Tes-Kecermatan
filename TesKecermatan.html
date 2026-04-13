@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tes Kecermatan</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+        <audio id="klikSound">
+            <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+        </audio>
+
+        <audio id="alarmSound">
+            <source src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3" type="audio/mpeg">
+        </audio>
+
+    <body>
+
+        <!-- HALAMAN PASSWORD -->
+        <div id="halamanPassword" class="container">
+            <h2>🔒 Akses Tes Kecermatan</h2>
+            <p>Masukkan password pengawas</p>
+
+            <input type="password" id="inputPassword" placeholder="Masukkan password">
+            <br><br>
+            <button class="btn-utama" onclick="cekPassword()">Masuk</button>
+
+            <p id="errorPassword" style="color:red; display:none;">Password salah!</p>
+        </div>
+
+    <div id="halamanTes" style="display:none;">
+        <!-- SEMUA isi web tes kamu yang sekarang -->
+
+
+        <div class="container">
+
+            <h1>TES KECERMATAN </h1>
+
+            <div id="login">
+                <h2>DATA PESERTA</h2>
+                <input type="text" id="nama" placeholder="Nama Peserta"><br><br>
+                <input type="text" id="nim" placeholder="NIM"><br><br>
+                <button class="btn-utama" onclick="keHalamanPetunjuk()">Lanjut</button>
+            </div>
+
+            <div id="petunjukHalaman" class="hidden">
+
+                <h1>PENJELASAN TES KECERMATAN</h1>
+
+                <div class="petunjuk">
+                    Tes ini bertujuan mengukur kecermatan dan kecepatan Anda.
+
+                    <br><br>
+                    Setiap soal menampilkan 4 simbol aneh.
+                    Dari total 5 simbol yang tersedia, ada 1 simbol yang HILANG.
+
+                    <br><br>
+                    Tugas Anda:
+                    Tentukan simbol yang hilang dan pilih huruf jawabannya.
+
+                    <br><br>
+                    Daftar simbol:
+                    <br>
+                    A = 𓂀 &nbsp;&nbsp;
+                    B = Ϟ &nbsp;&nbsp;
+                    C = Ѫ &nbsp;&nbsp;
+                    D = ᚦ &nbsp;&nbsp;
+                    E = ☬
+
+                    <br><br>
+                    Ketentuan:
+                    • Jumlah soal : 15  
+                    • Waktu : 180 detik  
+                    • Jawaban langsung berpindah soal  
+                    • Kerjakan secepat & seteliti mungkin
+
+                </div>
+
+                <button class="btn-utama" onclick="mulaiTes()">Mulai Ujian</button>
+
+            </div>
+
+            <div id="tes" class="hidden">
+
+                <div class="topbar">
+                    <div>Nama: <span id="namaPeserta"></span></div>
+                    <div>NIM: <span id="nimPeserta"></span></div>
+                    <div>Waktu: <span id="timer">30</span> detik</div>
+                    <div>Soal: <span id="progress">0</span> / 15</div>
+                </div>
+
+                <div class="petunjuk">
+                    Cari simbol yang HILANG lalu pilih hurufnya!
+                    <br><br>
+                    A = 𓂀  
+                    B = Ϟ  
+                    C = Ѫ  
+                    D = ᚦ  
+                    E = ☬
+                </div>
+
+                <div id="soal" class="soal"></div>
+
+                <div class="jawaban">
+                    <button onclick="jawab('A')">A</button>
+                    <button onclick="jawab('B')">B</button>
+                    <button onclick="jawab('C')">C</button>
+                    <button onclick="jawab('D')">D</button>
+                    <button onclick="jawab('E')">E</button>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+    </body>
+</html>
