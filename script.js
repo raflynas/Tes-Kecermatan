@@ -8,13 +8,13 @@ const simbol = {
 
 let jawabanBenar = ""
 let skor = 0
-let waktu = 180
+let waktu = 480
 let timerInterval
 let nomorSoal = 0
-let totalSoal = 15
+let totalSoal = 100
 let bolehJawab = true
 
-const PASSWORD_AKSES = "123"; // ganti sesuai keinginan
+const PASSWORD_AKSES = "a301"; // ganti sesuai keinginan
 
 function cekPassword() {
     const input = document.getElementById("inputPassword").value;
