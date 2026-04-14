@@ -61,7 +61,7 @@ function mulaiTes(){
 
     // reset nilai saat mulai ujian
     skor = 0
-    waktu = 180
+    waktu = 480
     nomorSoal = 0
 
     document.getElementById("progress").innerText = 0
